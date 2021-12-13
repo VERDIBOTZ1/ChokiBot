@@ -20,11 +20,25 @@ function kyun(seconds){
 }
 					runtime = process.uptime()
 					teks = `${kyun(runtime)}`
-global.owner = ['6283820073017','62813828362494', '6287827659529', '919089248348','12135998445', '6288708344182', '0' ] // Put your number here
+					run = `${kyun(runtime)}`
+global.owner = ['6283820073017', '6289677763976', '79224816516', '62857244470788', '6281362730880', '62895359557749']// Put your number here
 global.fake = ['6283820073017', '6281382836249', '6289681378568', '62813828362494', '6283801499848']
 global.fakeNum = ['6283820073017', '6281382836249', '6289681378568', '62813828362494', '6283801499848', '6283820073017','62813828362494', '6287827659529', '919089248348','12135998445', '0' ]
 global.mods = [] // Want some help?
-global.prems = [] // Premium user has unlimited limit
+global.prems = ['6285669443044', '380945680870', '6287843813955'] // Premium user has unlimited limit
+global.kontak = ['6289677763976'] // y
+namalu = './Pengocok • Hebat'
+
+//+6281362730880 Riri 1 = aktif
+//+62895359557749 Riri 2 = Private
+//6283190327988 Nerina 3 = Scanner
+/*Premium 
+6285669443044    // 29 November 2021 - 29 Desember
+380945680870      // 30 November 2021 - 30 Desember
+6287843813955   //Apen Pekalongan, Selamanya (no expired)
+Tambah lagi
+*/
+
 global.APIs = { // API Prefix
   // name: 'https://website'
   nrtm: 'https://nurutomo.herokuapp.com',
@@ -47,8 +61,9 @@ global.APIKeys = { // APIKey Here
 }
 
 // Sticker WM
-global.packname =  `Simple WhatsApp Bot`
-global.author = `@Rlxfly`
+global.packname =  `RSP • RyuuZeyy`
+global.author = ''
+//global.author = `@Rlxfly`
 global.thumb = tum
 global.thumb2 = tum2
 global.thumb3 = tum3
@@ -63,3 +78,8 @@ fs.watchFile(file, () => {
   delete require.cache[file]
   require(file)
 })
+
+gc1 = 'https://chat.whatsapp.com/FJkbQjpewltErmQRwzC9rj'
+gc2 = 'https://chat.whatsapp.com/HTcmEqjQeu1GMN2xN210QJ'
+gc3 = 'https://chat.whatsapp.com/I3yAMaBNA9X63FspQ5V46N'
+linkf = gc2
