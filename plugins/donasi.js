@@ -9,8 +9,7 @@ don = `┌〔 Donasi • Emoney 〕
 ├ saweria.co/rey404
 ├ trakteer.id/rey404
 └────`
-let img1 = fs.readFileSync('./src/img1.png')
-let img2 = fs.readFileSync('./src/img2.png')
+
 let user = global.DATABASE.data.users[m.sender]
 /*conn.sendFile(m.chat, img, '', `Halo juga kak ${conn.getName(m.sender)}`, { key: { fromMe: false, remoteJid: 'status@broadcast', participant: '0@s.whatsapp.net' }, message: { orderMessage: { message: `${ucapan()} ${conn.getName(m.sender)}`, itemCount: 999, thumbnail: fs.readFileSync('./src/mikey.jpg')
 }}})*/
@@ -45,7 +44,7 @@ runtime = process.uptime()
 							}
 					}
 //m.reply(don)
-conn.sendMessage(m.chat, `${ucapan()} Kak ${pushname}\n\n⬣━━〔 ---------- 〕━━⬣\n\n${don}\n⬣━━〔 ---------- 〕━━⬣\n`, 'conversation', {quoted: m, thumbnail: gambar2, contextInfo:{externalAdReply: {title: teks, body: `${run}`, sourceUrl: linkf, thumbnail: gambar1}}})
+conn.sendMessage(m.chat, `${ucapan()} Kak ${pushname}\n\n⬣━━〔 ---------- 〕━━⬣\n\n${don}\n⬣━━〔 ---------- 〕━━⬣\n`, 'conversation', {quoted: m, thumbnail: global.thumb, contextInfo:{externalAdReply: {title: teks, body: `${run}`, sourceUrl: linkf, thumbnail: global.thumb2}}})
 }
 handler.help = ['donasi']
 handler.tags = ['info']
