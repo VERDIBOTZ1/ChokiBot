@@ -67,6 +67,7 @@ global.author = ''
 global.thumb = tum
 global.thumb2 = tum2
 global.thumb3 = tum3
+global.wait = 'Tunggu Bentar Tot'
 
 global.runtime = teks
 global.multiplier = 69 // The higher, The harder levelup
