@@ -36,11 +36,11 @@ let gc = itsu.getName(m.chat)
     if (/image|video/.test(mime)) {
       let img = await q.download()
       if (!img) throw 'Foto/Video tidak ditemukan'
-      stiker = await sticker(img, false, 'By: ' + nick || '', '@Rlxfly' || '')
+      stiker = await sticker(img, false, global.packname || '', global.author || '')
     } else if (args[0]) stiker = await sticker(false, args[0], global.packname, global.author)
   } finally {
     if (stiker) itsu.sendMessage(m.chat, stiker, MessageType.sticker, {
-      quoted: m, contextInfo:{externalAdReply: {title: '', body: 'Simple WhatsApp Bot', sourceUrl: '', thumbnail: thumb3}}
+      quoted: m, contextInfo:{externalAdReply: {title: run, body: 'Simple WhatsApp Bot', sourceUrl: linkf, thumbnail: thumb3}}
     })
     else throw 'Conversion failed'
   }
