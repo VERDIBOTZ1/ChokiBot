@@ -79,8 +79,10 @@ fs.watchFile(file, () => {
   require(file)
 })
 
-gcid = '972502255007-1406453544'
+
 gc1 = 'https://chat.whatsapp.com/FJkbQjpewltErmQRwzC9rj'
 gc2 = 'https://chat.whatsapp.com/HTcmEqjQeu1GMN2xN210QJ'
 gc3 = 'https://chat.whatsapp.com/I3yAMaBNA9X63FspQ5V46N'
 linkf = gc2
+gcid = '972502255007-1406453544'
+lolkey = 'rey2k21'
