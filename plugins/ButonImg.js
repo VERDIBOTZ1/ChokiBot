@@ -19,7 +19,7 @@ let handler  = async (m, { itsu, usedPrefix: _p }) => {
 let fetch = require('node-fetch')
 let tag = `@${m.sender.split('@')[0]} 🐦`
  m, { contextInfo: { mentionedJid: itsu.parseMention(tag) }}
- let ow = `@${'0'.split('@')[0]}`
+ let ow = `@${'62857244470788'.split('@')[0]}`
  let pat1 = `@${'79224816516'.split('@')[0]}`
  let pat2 = `@${'6283820073017'.split('@')[0]}`
  m, { contextInfo: { mentionedJid: itsu.parseMention(tag) }}
