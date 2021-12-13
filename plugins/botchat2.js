@@ -1,14 +1,14 @@
 let moment = require('moment-timezone')
 let fs = require('fs')
-let handler = async (m, { conn, command }) => {
+let handler = async (m, { itsu, command }) => {
 /*let img = './src/mike.png'
 let img1 = fs.readFileSync('./src/img1.png')
 let img2 = fs.readFileSync('./src/img2.png')*/
 let user = global.DATABASE.data.users[m.sender]
-/*conn.sendFile(m.chat, img, '', `Halo juga kak ${conn.getName(m.sender)}`, { key: { fromMe: false, remoteJid: 'status@broadcast', participant: '0@s.whatsapp.net' }, message: { orderMessage: { message: `${ucapan()} ${conn.getName(m.sender)}`, itemCount: 999, thumbnail: fs.readFileSync('./src/mikey.jpg')
+/*itsu.sendFile(m.chat, img, '', `Halo juga kak ${itsu.getName(m.sender)}`, { key: { fromMe: false, remoteJid: 'status@broadcast', participant: '0@s.whatsapp.net' }, message: { orderMessage: { message: `${ucapan()} ${itsu.getName(m.sender)}`, itemCount: 999, thumbnail: fs.readFileSync('./src/mikey.jpg')
 }}})*/
-let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-let name = m.fromMe ? conn.user : conn.contacts[who]
+let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? itsu.user.jid : m.sender
+let name = m.fromMe ? itsu.user : itsu.contacts[who]
 pushname2 = `*${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[0])}*`
 
 function kyun(seconds){
@@ -38,7 +38,7 @@ runtime = process.uptime()
 							}
 					}
 					//m.reply(`Ada yang bida saya bantu?\n\n${run}`)
-await conn.sendMessage(m.chat, `⬣━━〔 ---------- 〕━━⬣\nHai ${pushname2} ${ucapan()} Ada yang bisa saya bantu?\n⬣━━〔 ---------- 〕━━⬣\n`, 'conversation', {quoted: m, thumbnail: global.thumb, contextInfo:{externalAdReply: {title: teks, body: `${run}`, sourceUrl: linkf, thumbnail: global.thumb2}}})
+await itsu.sendMessage(m.chat, `⬣━━〔 ---------- 〕━━⬣\nHai ${pushname2} ${ucapan()} Ada yang bisa saya bantu?\n⬣━━〔 ---------- 〕━━⬣\n`, 'conversation', {quoted: m, thumbnail: global.thumb, contextInfo:{externalAdReply: {title: teks, body: `${run}`, sourceUrl: linkf, thumbnail: global.thumb2}}})
 }
 handler.customPrefix = /^(P|p|Hallo|halo|Halo|hallo|hi|helo|hai|hi|Hai|Helo|Hello|oy)$/i
 handler.command = new RegExp

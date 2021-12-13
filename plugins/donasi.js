@@ -1,6 +1,6 @@
 let fs = require('fs')
 let moment = require('moment-timezone')
-let handler = async (m, { conn, command }) => {
+let handler = async (m, { itsu, command }) => {
 don = `┌〔 Donasi • Emoney 〕
 ├ Pulsa : 089677763976
 ├ Gopay : 089677763976
@@ -11,10 +11,10 @@ don = `┌〔 Donasi • Emoney 〕
 └────`
 
 let user = global.DATABASE.data.users[m.sender]
-/*conn.sendFile(m.chat, img, '', `Halo juga kak ${conn.getName(m.sender)}`, { key: { fromMe: false, remoteJid: 'status@broadcast', participant: '0@s.whatsapp.net' }, message: { orderMessage: { message: `${ucapan()} ${conn.getName(m.sender)}`, itemCount: 999, thumbnail: fs.readFileSync('./src/mikey.jpg')
+/*itsu.sendFile(m.chat, img, '', `Halo juga kak ${itsu.getName(m.sender)}`, { key: { fromMe: false, remoteJid: 'status@broadcast', participant: '0@s.whatsapp.net' }, message: { orderMessage: { message: `${ucapan()} ${itsu.getName(m.sender)}`, itemCount: 999, thumbnail: fs.readFileSync('./src/mikey.jpg')
 }}})*/
-let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-let name = m.fromMe ? conn.user : conn.contacts[who]
+let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? itsu.user.jid : m.sender
+let name = m.fromMe ? itsu.user : itsu.contacts[who]
 pushname = `*${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[0])}*`
 
 function kyun(seconds){
@@ -44,7 +44,7 @@ runtime = process.uptime()
 							}
 					}
 //m.reply(don)
-conn.sendMessage(m.chat, `${ucapan()} Kak ${pushname}\n\n⬣━━〔 ---------- 〕━━⬣\n\n${don}\n⬣━━〔 ---------- 〕━━⬣\n`, 'conversation', {quoted: m, thumbnail: global.thumb, contextInfo:{externalAdReply: {title: teks, body: `${run}`, sourceUrl: linkf, thumbnail: global.thumb2}}})
+itsu.sendMessage(m.chat, `${ucapan()} Kak ${pushname}\n\n⬣━━〔 ---------- 〕━━⬣\n\n${don}\n⬣━━〔 ---------- 〕━━⬣\n`, 'conversation', {quoted: m, thumbnail: global.thumb, contextInfo:{externalAdReply: {title: teks, body: `${run}`, sourceUrl: linkf, thumbnail: global.thumb2}}})
 }
 handler.help = ['donasi']
 handler.tags = ['info']
