@@ -1,5 +1,5 @@
 let fetch = require('node-fetch')
-let handler = async (m, { conn, args }) => {
+let handler = async (m, { itsu, args }) => {
   if (!args[0]) throw 'Uhm...url nya mana?'
   let res = await fetch(global.API('xteam', '/dl/ighighlight', {
     nama: args[0]
@@ -9,7 +9,7 @@ let handler = async (m, { conn, args }) => {
   let { username, items } = json.result
   for (let { thumbnail, isVideo, url } of items) {
     thumbnail = await (await fetch(thumbnail)).buffer()
-    conn.sendFile(m.chat, url, 'ig' + (isVideo ? '.mp4' : '.jpg'), `@${username}`, m, false, {
+    itsu.sendFile(m.chat, url, 'ig' + (isVideo ? '.mp4' : '.jpg'), `@${username}`, m, false, {
       thumbnail
     })
   }

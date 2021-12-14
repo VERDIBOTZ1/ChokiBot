@@ -21,7 +21,7 @@ handler.limit = true
 
 module.exports = handler*/
 
-let handler = async (m, { conn, participants, usedPrefix, command }) => {
+let handler = async (m, { itsu, participants, usedPrefix, command }) => {
 let member = participants.map(u => u.jid)
 let orang
 if (/ku/i.test(command)) orang = m.sender
@@ -29,8 +29,8 @@ else orang = member[Math.floor(Math.random() * member.length)]
 let jodoh = member[Math.floor(Math.random() * member.length)]
 let jawab = `@${orang.replace(/@.+/, '')} ❤️ @${jodoh.replace(/@.+/, '')}`.trim()
 let mentionedJid = [orang, jodoh]
-//conn.reply(m.chat, jawab, m, { contextInfo: { mentionedJid } })
-await conn.sendButton(m.chat, jawab, footer, 'Jadian💘♥️❤️😘', `${usedPrefix + command}`, m, { contextInfo: { mentionedJid } })
+//itsu.reply(m.chat, jawab, m, { contextInfo: { mentionedJid } })
+await itsu.sendButton(m.chat, jawab, footer, 'Jadian💘♥️❤️😘', `${usedPrefix + command}`, m, { contextInfo: { mentionedJid } })
 }
 handler.help = ['jodohin', 'jodohku', 'jadian']
 handler.tags = ['main']

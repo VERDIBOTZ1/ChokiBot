@@ -1,6 +1,6 @@
-let handler = async (m, { conn, args: [event], text }) => {
+let handler = async (m, { itsu, args: [event], text }) => {
     let mentions = text.replace(event, '').trimStart()
-    let who = mentions ? conn.parseMention(mentions) : []
+    let who = mentions ? itsu.parseMention(mentions) : []
     let participants = who.length ? who : [m.sender]
     let action = false
     m.reply(`Simulating ${event}...`)
@@ -27,12 +27,12 @@ let handler = async (m, { conn, args: [event], text }) => {
             break
         default: throw `List Event: welcome, bye, delete, promote, demote`
     }
-    if (action) return conn.onParticipantsUpdate({
+    if (action) return itsu.onParticipantsUpdate({
         jid: m.chat,
         participants,
         action
     })
-    return conn.onDelete(m)
+    return itsu.onDelete(m)
 }
 handler.help = ['simulate <event> [@mention]']
 handler.tags = ['owner', 'group']

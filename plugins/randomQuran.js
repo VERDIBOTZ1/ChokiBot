@@ -1,6 +1,6 @@
 let axios = require('axios')
 let fetch = require('node-fetch')
-let handler = async(m, { conn, usedPrefix, command }) => {
+let handler = async(m, { itsu, usedPrefix, command }) => {
 
 
 	let res = await (await fetch(`https://kuhong-api.herokuapp.com/api/randomquran?apikey=7kAPq2CGulUULDM-42moP`)).json()
@@ -15,7 +15,7 @@ let handler = async(m, { conn, usedPrefix, command }) => {
 	Surat : ${surat}
 	Ayat : ${ayat}`.trim()
 
-    conn.sendButton(m.chat, hasil, footer, 'Quran Random', `${usedPrefix + command}`, m)
+    itsu.sendButton(m.chat, hasil, footer, 'Quran Random', `${usedPrefix + command}`, m)
 }
 handler.help = ['randomquran']
 handler.tags = ['islam']

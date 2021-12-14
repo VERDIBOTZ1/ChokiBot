@@ -37,7 +37,7 @@ const anu = {
 }
 handler.help = ['broadcastgroup','bcgc'].map(v => v + ' <teks>')
 handler.tags = ['owner']
-handler.command = /^(broadcast|bc)(group|grup|gc)$/i
+handler.command = /^(broadcast|bc)(groupf|grupf|gcf)$/i
 handler.owner = true
 handler.mods = false
 handler.premium = false

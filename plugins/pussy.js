@@ -1,10 +1,10 @@
 let fetch = require('node-fetch')
-let handler = async (m, { conn, usedPrefix, command }) => {
+let handler = async (m, { itsu, usedPrefix, command }) => {
 	if (!db.data.chats[m.chat].nsfw && m.isGroup) throw global.nsfw
   m.reply('Sedang Diproses...')
   bzz = await fetch(`https://api.xteam.xyz/randomimage/pussy?apikey=${xteamkey}`)
   res = await bzz.buffer()
-  conn.sendButtonImg(m.chat, res, kasihcaption, footer, 'Next', `${usedPrefix + command}`, m, { contextInfo: { forwardingScore: 999, isForwarded: true }})
+  itsu.sendButtonImg(m.chat, res, kasihcaption, footer, 'Next', `${usedPrefix + command}`, m, { contextInfo: { forwardingScore: 999, isForwarded: true }})
 
 }
 handler.help = ['pussy']

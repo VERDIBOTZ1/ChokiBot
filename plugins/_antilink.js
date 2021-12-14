@@ -1,20 +1,36 @@
+/*let linkRegex = /chat.whatsapp.com\/(?:invite\/)?([0-9A-Za-z]{20,24})/i
+module.exports = {
+  before(m, { isAdmin, isBotAdmin }) {
+    if (m.isBaileys && m.fromMe) return true
+    let chat = global.db.data.chats[m.chat]
+    let isGroupLink = linkRegex.exec(m.text)
+
+    if (chat.antiLink && isGroupLink) {
+      m.reply('Hapus!!\n\nLink Grup terdeteksi')
+      if (global.opts['restrict']) {
+        if (isAdmin || !isBotAdmin) return true
+         this.groupRemove(m.chat, [m.sender])
+      }
+    }
+    return true
+  }
+}
+*/
 let handler = m => m
 
-let linkRegex = /chat.whatsapp.com\/([0-9A-Za-z]{20,24})/i
-handler.before = async function (m, { user, isBotAdmin, isAdmin }) {
-  if ((m.isBaileys && m.fromMe) || m.fromMe || !m.isGroup) return true
-  let chat = global.DATABASE.data.chats[m.chat]
+let linkRegex = /chat.whatsapp.com\/(?:invite\/)?([0-9A-Za-z]{20,24})/i
+handler.before = async function (m, { isAdmin, isBotAdmin }) {
+  if (m.isBaileys && m.fromMe) return true
+  let chat = global.db.data.chats[m.chat]
   let isGroupLink = linkRegex.exec(m.text)
 
-  if (chat.antiLink && isGroupLink) {
-    await m.reply(`*Say goodbye ${await this.getName(m.sender)}* \n\n_die_`)
-    if (isAdmin) return m.reply('*Umm.. you are admin, and you not kicked:>*')
-    if (!isBotAdmin) return m.reply('*Bot bukan admin, mana bisa kick orang :v*')
-    let linkGC = ('https://chat.whatsapp.com/' + await this.groupInviteCode(m.chat))
-    let isLinkThisGc = new RegExp(linkGC, 'i')
-    let isgclink = isLinkThisGc.test(m.text)
-    if (isgclink) return m.reply('*:v*')
-    await this.groupRemove(m.chat, [m.sender])
+  if (chat.antiLink && isGroupLink && !isAdmin && !m.isBaileys && m.isGroup) {
+    let thisGroup = `https://chat.whatsapp.com/${await itsu.groupInviteCode(m.chat)}`
+    if (m.text.includes(thisGroup)) throw false // jika link grup itu sendiri gak dikick
+    await itsu.sendButton(m.chat, `*Link Grup Terdeteksi!*${isBotAdmin ? '' : '\n\nbukan admin jadi gabisa kick t_t'}\n\nKetik *.off antilink* untuk mematikan fitur ini${opts['restrict'] ? '' : '\nketik *#on restrict* supaya bisa kick'}`, footer, 'Matikan Antilink', '#off antilink', m)
+    //if (global.opts['restrict']) {
+      if (isBotAdmin) this.groupRemove(m.chat, [m.sender])
+//    }
   }
   return true
 }
