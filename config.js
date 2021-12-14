@@ -88,3 +88,5 @@ linkf = gc2
 linkff = namaig
 gcid = '972502255007-1406453544'
 lolkey = 'rey2k21'
+bc = 'ChokiBot'
+footer 'ChokiBot'
