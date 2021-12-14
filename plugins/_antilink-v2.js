@@ -4,7 +4,7 @@ let handler = m => m
 let linkRegex = /৭/i
 handler.before = async function (m, { isAdmin, isBotAdmin }) {
   if (m.isBaileys && m.fromMe) return true
-  let chat = global.db.data.chats[m.chat]
+  let chat = global.DATABASE.data.chats[m.chat]
   let isGroupLink = linkRegex.exec(m.text)
 
   if (chat.antiLink && isGroupLink && !isAdmin && !m.isBaileys && m.isGroup) {

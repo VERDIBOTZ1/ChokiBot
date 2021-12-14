@@ -3,7 +3,7 @@ let handler = async (m, { text }) => {
   user.afk = + new Date
   user.afkReason = text
   m.reply(`
-${itsu.getName(m.sender)} is now AFK${text ? ': ' + text : ''}
+@${m.sender.split`@`[0]} Sekarang AFK${text ? ': ' + text : ''}
 `)
 }
 handler.help = ['afk [alasan]']
