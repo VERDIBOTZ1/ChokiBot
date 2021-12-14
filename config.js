@@ -26,7 +26,7 @@ global.owner = ['6281234567890'] // Put your number here
 global.fake = ['6283820073017', '6281382836249', '6289681378568', '62813828362494', '6283801499848']
 global.fakeNum = ['6283820073017', '6281382836249', '6289681378568', '62813828362494', '6283801499848', '6283820073017','62813828362494', '6287827659529', '919089248348','12135998445', '0' ]
 global.mods = [] // Want some help?
-global.prems = ['6285669443044', '380945680870', '6287843813955'] // Premium user has unlimited limit
+global.prems = [''] // Premium user has unlimited limit
 global.kontak = ['6289677763976'] // y
 namalu = './Pengocok • Hebat'
 
