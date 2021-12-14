@@ -7,7 +7,7 @@ let fs = require ('fs')
 '...',
 ]
 var teks = teksnye[Math.floor(Math.random() * (teksnye.length))]
-itsu.sendMessage(m.chat, 'join' , 'conversation', {quoted: m, thumbnail: global.thumb2, contextInfo:{externalAdReply: {title: 'UwU', sourceUrl: 'https://chat.whatsapp.com/J3j8XFLPnOR0RI937C8Biu', thumbnail: global.thumb}}})
+itsu.sendMessage(m.chat, 'join' , 'conversation', {quoted: m, thumbnail: global.thumb2, contextInfo:{externalAdReply: {title: 'UwU', sourceUrl: linkf, thumbnail: global.thumb}}})
 }
 
 handler.help = ['from']

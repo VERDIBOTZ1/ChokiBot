@@ -3,6 +3,8 @@ let handler  = async (m, { itsu, args, usedPrefix, command }) => {
 	let isClose = { // Switch Case Like :v
 		'open': false,
 		'close': true,
+		'buka': false,
+		'tutup': true,
 	}[(args[0] || '')]
 	await itsu.updatePresence(m.chat, Presence.composing)
 	if (isClose === undefined)
