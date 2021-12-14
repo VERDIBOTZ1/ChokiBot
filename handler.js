@@ -29,7 +29,7 @@ this.updatePresence(m.chat, Presence.recording)
         if (typeof user !== 'object') global.DATABASE.data.users[m.sender] = {}
         if (user) {
           if (!isNumber(user.exp)) user.exp = 0
-          if (!isNumber(user.limit)) user.limit = 10
+          if (!isNumber(user.limit)) user.limit = 100
           if (!isNumber(user.lastclaim)) user.lastclaim = 0
           if (!('registered' in user)) user.registered = false
           if (!user.registered) {
@@ -45,7 +45,7 @@ this.updatePresence(m.chat, Presence.recording)
           if (!('autolevelup' in user)) user.autolevelup = false
         } else global.DATABASE.data.users[m.sender] = {
           exp: 0,
-          limit: 10,
+          limit: 100,
           lastclaim: 0,
           registered: false,
           name: this.getName(m.sender),
