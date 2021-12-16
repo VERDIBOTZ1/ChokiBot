@@ -2,6 +2,9 @@
 Project Photo Profile panjang di base Nuru
 
 
+## whatsapp number
+
+* [`WhatsApp Owner`](https://wa.me/79224816516)
 
 Ganti PP grup : 
 #setppgc 
