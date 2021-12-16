@@ -4,7 +4,7 @@ Project Photo Profile panjang di base Nuru
 
 
 Ganti PP grup : 
-#setppgc ( Perbaikan )
+#setppgc 
 
 Ganti PP Bot :
 #setbotpp
