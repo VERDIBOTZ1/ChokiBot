@@ -3,8 +3,8 @@ Project Photo Profile panjang di base Nuru
 
 
 
-Ganti PP grup :
-#setpp
+Ganti PP grup : (Eror)
+#setppgc
 
 Ganti PP Bot :
 #setbotpp
