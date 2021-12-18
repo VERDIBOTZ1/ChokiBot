@@ -10,7 +10,7 @@ Ganti PP grup :
 #setppgc 
 
 Ganti PP Bot :
-#setbotpp
+#setppbot
 
 
 
