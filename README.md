@@ -101,7 +101,7 @@ node .
 ## Special Thanks to
 * [`adiwajshing/Baileys`](https://github.com/adiwajshing/Baileys)
 * [`Nurutomo`](https://github.com/nurutomo)
-* [`Entahlah`](https://github.com/RTeam1)
+* [`RelTod`](https://github.com/RTeam1)
 * [`All Creator Bot`](https://google.com)
 
 ## whatsapp number
