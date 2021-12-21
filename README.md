@@ -4,7 +4,7 @@ Project Photo Profile panjang di base Nuru
 
 ## whatsapp number
 
-* [`WhatsApp Owner`](https://wa.me/79224816516)
+* [`WhatsApp Owner`](https://wa.me/+6282221792667)
 
 Ganti PP grup : 
 #setppgc 
@@ -20,7 +20,7 @@ Gunakan dengan bijak
 
 
 
-Creator : Nurutomo
+Creator : aku wibu
 
 ## NOTE: 
 ```bash
@@ -100,16 +100,16 @@ node .
 
 ## Special Thanks to
 * [`adiwajshing/Baileys`](https://github.com/adiwajshing/Baileys)
-* [`Nurutomo`](https://github.com/nurutomo)
-* [`RelTod`](https://github.com/RTeam1)
+* [`botcah`](https://github.com/BOTCAHX
+* [`verdtod`](https://github.com/VERDIBOTZ1)
 * [`All Creator Bot`](https://google.com)
 
 ## whatsapp number
-* [`WhatsApp`](https://wa.me/79224816516)
+* [`WhatsApp`](https://wa.me/+6282221792667)
 ### Donate
 * [`Saweria`](https://saweria.co/rey404)
 * [`Trakteer`](https://trakteer.id/rey404)
-* [`Dana  : +62896-7776-3976`]
-* [`OVO   : +62896-7776-3976`]
-* [`Gopay : +62896-7776-3976`]
-* [`Pulsa : +62896-7776-3976`]
+* [`Dana  : +6283869803330`]
+* [`OVO   : +6283869803330`]
+* [`Gopay : +628+6282221792667`]
+* [`Pulsa : +628+6282221792667`]
